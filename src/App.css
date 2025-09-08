@@ -1,0 +1,83 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50px;
+  border-width: 0px;
+  background-color: #ba5bba;
+  color: white;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #f79cf7;
+}
+
+.main, .add, .get, .timer {
+  width: 100%;
+  background-color: lightpink;
+  align-items: center;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.time-container {
+  display: block;
+  background-color: #ba5bba;
+  border-radius: 30px;
+  font-size: 50px;
+  color: white;
+  padding: 100px;
+  margin: 20px;
+  width: 200px;
+}
+
+form {
+  width: 500px;
+  height: 300px;
+  align-items: center;
+  padding-top: 100px;
+  margin-left: 60px;
+  border-radius: 50px;
+  font-size: 20px;
+  box-shadow: 10px 10px 15px rgb(0, 0, 1, 0.2);
+  background-color: rgb(254, 206, 213);
+}
+
+form input {
+  background-color: wheat;
+  font-size: 15px;
+  border-radius: 5px;
+  border: solid gray;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.footer, .header {
+  width: 100%;
+  background-color: #ba5bba;
+  padding: 50px;
+  color: white;
+}
