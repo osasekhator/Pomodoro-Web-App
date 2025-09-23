@@ -44,7 +44,7 @@ function PomTimer(props) {
         if(timer === 0 && isRunning) {
             handleSessionEnd();
         }
-    }, [timer]);
+    }, [timer, handleSessionEnd, isRunning]);
 
     async function handleSessionEnd() {
         const end = new Date().getTime();
@@ -182,5 +182,6 @@ function PomTimer(props) {
         </div>
     );
 }
+
 
 export default PomTimer;
