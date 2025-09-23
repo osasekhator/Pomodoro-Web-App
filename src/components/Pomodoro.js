@@ -1,7 +1,6 @@
 import Header from "../Header";
 import Footer from "./Footer";
 import PomTimer from "./PomTimer";
-import MockTimer from "./MockTimer";
 import { useParams } from "react-router-dom";
 
 function Pomodoro() {
@@ -10,10 +9,11 @@ function Pomodoro() {
     return(
         <div>
             <Header/>
-            <MockTimer projectId = {id}/>
+            <PomTimer projectId = {id}/>
             <Footer/>
         </div>
     );
 }
+
 
 export default Pomodoro;
