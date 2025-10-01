@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+🍅 Pomodoro Project Tracker (Full-Stack)
+A professional, full-stack implementation of the Pomodoro Technique designed to help users manage time and track project-specific work sessions. This application uses a dedicated API Server and a PostgreSQL database to ensure reliable, synchronized data persistence across devices.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✨ Key Features
+⏱️ Pomodoro Timer: Standard 25-minute work sessions with integrated start/stop controls tied to specific projects.
 
-## Available Scripts
+✅ Full Project Lifecycle: Add, view, edit, and track individual project tasks and their associated work sessions.
 
-In the project directory, you can run:
+🌐 Data Synchronization: All tasks and session logs are saved instantly to a central PostgreSQL database.
 
-### `npm start`
+🔒 Secure API Layer: Data requests are handled by a dedicated API server, ensuring secure and controlled access to the database.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📱 Fully Responsive: The user interface is built with React and is optimized for both desktop and mobile use.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🛠️ Technology Stack (Three-Tier Architecture)
+This application is divided into three distinct layers:
 
-### `npm test`
+1. Frontend (Client)
+Framework: React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Routing: React Router DOM
 
-### `npm run build`
+Function: Handles the user interface, timer display, and sends API requests.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Backend (Server/API)
+Framework/Language: [Placeholder for your server technology, e.g., Node.js with Express or Python/Flask]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Function: Serves the React files, validates incoming data, handles user authentication, and runs the PostgreSQL queries.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Database
+Database: PostgreSQL
 
-### `npm run eject`
+Function: Securely stores all project details, task data, and Pomodoro session history.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🚀 Local Development Setup
+To run this full-stack application locally, you must run both the backend server and the frontend client simultaneously.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Prerequisites
+You need Node.js, npm, and a local PostgreSQL instance running.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Database Setup
+Ensure your local PostgreSQL service is running.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a new database for the project (e.g., pomodoro_db).
 
-## Learn More
+Update the connection string in your backend configuration file with your local PostgreSQL credentials.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Installation & Running the Server
+Clone the Repository:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+git clone [https://github.com/osasekhator/Pomodoro-Web-App.git](https://github.com/osasekhator/Pomodoro-Web-App.git)
+cd Pomodoro-Web-App
 
-### Code Splitting
+Install Dependencies (Server and Client):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Run npm install in the root directory
+npm install
+# You will also need to install dependencies for your backend server
+# e.g., pip install -r requirements.txt (if using Python)
 
-### Analyzing the Bundle Size
+Start the Backend API Server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Use the appropriate command for your server (e.g., node server.js or python main.py)
+npm run start-server 
 
-### Making a Progressive Web App
+(The server should now be running, typically on port 5000.)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Running the Frontend
+Start the React Client:
 
-### Advanced Configuration
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The application will open in your browser at http://localhost:3000 and communicate with your local API server.
 
-### Deployment
+☁️ Deployment
+Since this is a full-stack application utilizing a backend server and a PostgreSQL database, it cannot be deployed to static hosting services like GitHub Pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I intend to deploy this application, with the use of a Platform as a Service (PaaS) provider, capable of hosting a dynamic web service and a database instance.
