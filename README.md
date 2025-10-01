@@ -1,7 +1,7 @@
 # 🍅 Pomodoro Project Tracker (Full-Stack)
 A professional, full-stack implementation of the Pomodoro Technique designed to help users manage time and track project-specific work sessions. This application uses a dedicated API Server and a PostgreSQL database to ensure reliable, synchronized data persistence across devices.
 
-✨ Key Features
+## ✨ Key Features
 ⏱️ Pomodoro Timer: Standard 25-minute work sessions with integrated start/stop controls tied to specific projects.
 
 ✅ Full Project Lifecycle: Add, view, edit, and track individual project tasks and their associated work sessions.
