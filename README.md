@@ -53,19 +53,19 @@ cd Pomodoro-Web-App
 
 Install Dependencies (Server and Client):
 
-# Run npm install in the root directory
+Run npm install in the root directory
 npm install
-# You will also need to install dependencies for your backend server
-# e.g., pip install -r requirements.txt (if using Python)
+You will also need to install dependencies for your backend server
+e.g., pip install -r requirements.txt (if using Python)
 
 Start the Backend API Server:
 
-# Use the appropriate command for your server (e.g., node server.js or python main.py)
+Use the appropriate command for your server (e.g., node server.js or python main.py)
 npm run start-server 
 
 (The server should now be running, typically on port 5000.)
 
-3. Running the Frontend
+Running the Frontend
 Start the React Client:
 
 npm start
