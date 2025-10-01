@@ -23,7 +23,7 @@ Routing: React Router DOM
 Function: Handles the user interface, timer display, and sends API requests.
 
 2. Backend (Server/API)
-Framework/Language: [Placeholder for your server technology, e.g., Node.js with Express or Python/Flask]
+Framework/Language: Python/Flask
 
 Function: Serves the React files, validates incoming data, handles user authentication, and runs the PostgreSQL queries.
 
