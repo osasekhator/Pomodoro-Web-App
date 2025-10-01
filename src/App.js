@@ -8,7 +8,7 @@ import Pomodoro from './components/Pomodoro';
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter>
+      <BrowserRouter basename="/Pomodoro-Web-App">
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/add_projects' element={<AddProject/>}/>
