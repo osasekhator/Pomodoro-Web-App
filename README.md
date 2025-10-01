@@ -1,4 +1,4 @@
-🍅 Pomodoro Project Tracker (Full-Stack)
+# 🍅 Pomodoro Project Tracker (Full-Stack)
 A professional, full-stack implementation of the Pomodoro Technique designed to help users manage time and track project-specific work sessions. This application uses a dedicated API Server and a PostgreSQL database to ensure reliable, synchronized data persistence across devices.
 
 ✨ Key Features
