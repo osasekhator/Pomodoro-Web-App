@@ -3,7 +3,7 @@ from flask_cors import CORS
 import database
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]}})
 
 @app.route('/projects', methods=['POST'])
 def create_project():
@@ -77,6 +77,22 @@ def add_timer(proj_id, session_id):
         return jsonify(new_timer), 201
     else:
         return jsonify({"error": "Failed to add timer to database"}), 500
+    
+@app.route('/projects/<int:project_id>', methods=['DELETE'])
+def delete_project(project_id):
+    """
+    Handles DELETE requests to /projects/<project_id> to remove a project.
+    """
+    # 1. Call the database function to perform the deletion
+    success = database.delete_project(project_id)
+    
+    # 2. Check the result and return the appropriate HTTP response
+    if success:
+        # 204 No Content is the standard response for a successful DELETE
+        return '', 204 
+    else:
+        # If the project wasn't found or deletion failed
+        return jsonify({"error": f"Project with ID {project_id} not found or could not be deleted"}), 404
 
 if __name__ == '__main__':
     database.create_tables()

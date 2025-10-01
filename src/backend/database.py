@@ -142,6 +142,25 @@ def add_timer(session_id, type, duration):
         print(f"Error adding timer: {e}")
         connection_o.rollback()
         return None
+    
+def delete_project(project_id):
+    if not cursor_o:
+        return False
+        
+    try:
+        query = "DELETE FROM projects WHERE id = %s"
+        cursor_o.execute(query, (project_id,))
+        
+        if cursor_o.rowcount == 0:
+            connection_o.rollback()
+            return False
+            
+        connection_o.commit()
+        return True
+        
+    except psycopg2.Error as e:
+        connection_o.rollback()
+        return False
 
 if __name__ == '__main__':
     create_tables()
